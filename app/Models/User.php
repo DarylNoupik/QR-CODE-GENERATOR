@@ -45,4 +45,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function qrcodes()
+    {
+        return $this->hasMany(QrCode::class);
+    }
 }
